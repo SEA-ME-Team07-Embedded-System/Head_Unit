@@ -49,3 +49,4 @@ PRIVATE
     CommonAPI-SomeIP 
     vsomeip3
 )
+install(TARGETS Head_Unit DESTINATION /usr/bin/example/vsomeip-example)
