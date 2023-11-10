@@ -11,7 +11,7 @@ Window {
     width: 1024
     height: 600
     visible: true
-    //visibility: Window.FullScreen
+    visibility: Window.FullScreen
     title: qsTr("Head Unit")
     property color leftbutton_colors : "#383838"
 
@@ -42,7 +42,7 @@ Window {
                 Plugin {
                     id: mapPlugin
                     name: "mapboxgl" // Mapbox plugin name
-                    PluginParameter { name: "mapbox.access_token"; value: "file:/home/seame-workstation07/QT/Examples/Qt-5.15.2/quickcontrols/extras/dashboard_new/qml/mapbox/api-key.txt" }
+                    PluginParameter { name: "mapbox.access_token"; value: "qrc:/qml/mapbox/arrow_grey.png" }
                 }
                 Map {
                     id: map

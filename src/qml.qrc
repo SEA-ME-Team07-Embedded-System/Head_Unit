@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>qml/main.qml</file>
+        <file>qml/mapbox/api-key.txt</file>
         <file>image/arrow_grey.png</file>
         <file>image/car.png</file>
         <file>image/porsche_upview.png</file>
