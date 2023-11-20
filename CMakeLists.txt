@@ -18,17 +18,18 @@ link_directories(
     ${CMAKE_LIBRARY_PATH}
 )
 
-find_package(Qt5 COMPONENTS Core Quick Gui DBus Multimedia VirtualKeyboard Location Positioning WebEngine REQUIRED)
-
+find_package(Qt5 COMPONENTS Core Quick Gui Multimedia VirtualKeyboard Location Positioning WebEngine REQUIRED)
+        
 add_executable(Head_Unit
         src/main.cpp
-        src/dbusmanager.cpp
         src/someipmanager.cpp
+        src/methodcallsomeipmanager.cpp
+        src/piracersomeipmanager.cpp
         src/qml.qrc
-        src-gen/v1/commonapi/CANSomeIPStubAdapter.cpp
         src-gen/v1/commonapi/CANSomeIPDeployment.cpp
         src-gen/v1/commonapi/CANSomeIPProxy.cpp
-        src-gen/v1/commonapi/CANSomeIPDeployment.cpp
+        src-gen/v1/commonapi/PiracerSomeIPProxy.cpp
+        src-gen/v1/commonapi/PiracerSomeIPDeployment.cpp
         )
 
 target_compile_definitions(Head_Unit
@@ -40,7 +41,6 @@ PRIVATE
     Qt5::Quick 
     Qt5::Gui 
     Qt5::Multimedia 
-    Qt5::DBus 
     Qt5::Location 
     Qt5::Positioning 
     Qt5::WebEngine
